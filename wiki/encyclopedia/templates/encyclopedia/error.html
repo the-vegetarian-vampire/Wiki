@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+
+<h2> {{ message }} </h2>
+<body>
+    <img src="{% static 'jp.gif' %}" height="250px">
+        <div class="audio">
+            <audio controls autoplay>
+            <source src="{% static 'jp.mp3' %}" type="audio/mpeg">
+            </audio>
+        </div>
+</body>
+
+
+{% endblock %}
