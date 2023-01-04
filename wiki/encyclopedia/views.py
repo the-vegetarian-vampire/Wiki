@@ -28,7 +28,7 @@ def entry(request, title): # directs to error page
             "message": "404 Error - Page Not Found"
         })
     else:
-        return render(request, "encyclopedia/page.html", {
+        return render(request, "encyclopedia/entry.html", {
         "title": title,
         "content": html
     })
@@ -38,14 +38,44 @@ def search(request):
         entry = request.POST['q']
         html = convert_markdown(entry)
         if html != None:
-            return render(request, "encyclopedia/page.html", {
+            return render(request, "encyclopedia/entry.html", {
             "title": entry,
             "content": html
             })
         else:
             list = []
-            entries = until.list_entries()
+            entries = util.list_entries()
             for item in entries:
                 if entry.lower() in item.lower():
                     list.append(item)
+            return render(request, "encyclopedia/search.html", {
+                "list": list
+                })
 
+
+def new(request):
+    if request.method == "GET":
+        return render(request, "encyclopedia/new.html")
+    else:
+        title = request.POST['title']
+        content = request.POST['content']
+        exists = util.get_entry(title)
+        if exists != None:
+            return render(request, "encyclopedia/error2.html", {
+                "message": "Page already exists"
+            })
+        else:
+            util.save_entry(title, content)
+            html = convert_markdown(title)
+            return render(request, "encyclopedia/entry.html", {
+                "title": title,
+                "content": html
+            })
+def edit(request):
+    if request.method == "POST":
+        title = request.POST['entry_title']
+        content = util.get_entry(title)
+        return render(request, "encyclopedia/edit.html", {
+                "title": title,
+                "content": content
+        })

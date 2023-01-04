@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block body %}
-<h1>Edit Page</h1>
+<h1>New Page</h1>
 
 <form action="{% url 'new' %}" method="post">
     {% csrf_token %}
@@ -18,7 +18,7 @@
         <label for="content">Content:</label>
         <textarea class="form-control" name="content" rows="15" id="content"></textarea>
     </div>
-    <button type="button" class="btn btn-warning">Edit</button>
+    <button class="btn btn-primary">Submit</button>
 </form>
 
 

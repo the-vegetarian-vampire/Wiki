@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for entry in list %}
+            <li><a href="{% url 'entry' title=entry %}"> {{ entry }} </a></li>
+        {% empty %}
+        <li> No results found. Click <a href="/"> home</a> to go back. </li> 
+        <img src="{% static 'bathroom.gif' %}" height="275px">
+        {% endfor %}
+    </ul>
+
+{% endblock %}
