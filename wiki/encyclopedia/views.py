@@ -21,7 +21,7 @@ def convert_markdown(entry): # converts markdown to HTML
     else:
         return markdown.convert(content)
 
-def entry(request, title): # directs to error page
+def entry(request, title): # directs to error page or content page
     html = convert_markdown(title)
     if html == None:
         return render(request, "encyclopedia/error.html", {
@@ -67,10 +67,9 @@ def new(request):
         else:
             util.save_entry(title, content)
             html = convert_markdown(title)
-            return render(request, "encyclopedia/entry.html", {
-                "title": title,
-                "content": html
+            return render(request, "encyclopedia/success.html", {
             })
+
 def edit(request):
     if request.method == "POST":
         title = request.POST['entry_title']
@@ -79,3 +78,23 @@ def edit(request):
                 "title": title,
                 "content": content
         })
+
+def save(request):
+    if request.method == "POST":
+        title = request.POST['title']
+        content = request.POST['content']
+        util.save_entry(title, content)
+        html = convert_markdown(title)
+        return render(request, "encyclopedia/entry.html", {
+            "title": title,
+            "content": html
+        })
+
+def rand(request):
+    entries  = util.list_entries()
+    entry = random.choice(entries)
+    html = convert_markdown(entry)
+    return render(request, "encyclopedia/entry.html", {
+        "title": entry,
+        "content": html
+    })
