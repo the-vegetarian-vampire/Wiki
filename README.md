@@ -1,5 +1,5 @@
-Inline-style:
-![jurrasic](https://user-images.githubusercontent.com/105305546/213838579-ddf46eca-0e03-4c62-91eb-c603344e5191.png)
+![jurrasic copy](https://user-images.githubusercontent.com/105305546/213839513-4211e3ab-55f1-4522-a4fa-0c6d72f5003c.png)
+
 
 # Wiki
 Project 1 for Harvard's CS50w Web Programming with Python and JavaScript.
