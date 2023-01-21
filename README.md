@@ -1,4 +1,4 @@
-![jurrasic copy](https://user-images.githubusercontent.com/105305546/213839706-b7f3f10b-da26-44c9-a91c-a734e61c925e.png)
+![jurrasic copy](https://user-images.githubusercontent.com/105305546/213839749-77b81efa-62d1-4817-af83-3123dbdd54f3.png)
 
 # Wiki
 Project 1 for Harvard's CS50w Web Programming with Python and JavaScript.
