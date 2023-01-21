@@ -23,6 +23,8 @@ This site contains:
 2. __Search__: allows the user to query in the search bar for an encyclopedia entry.
    If the query matches the name of an encyclopedia entry, the user is redirected to that entry’s page.
    If the query does not match the name of an encyclopedia entry, the user is taken to a search results page that displays a list of all encyclopedia    entries with the query as a substring. For example, if the search query were `ytho`, `Python` appears in the search results.
+   
+   <img width="533" alt="Screen Shot 2023-01-20 at 9 24 04 PM" src="https://user-images.githubusercontent.com/105305546/213839819-f70a0038-4c87-4524-9470-c15b81c10585.png">
 
 3. __New__ __Page__: “Create New Page” allows the user to create a new encyclopedia entry.
    Users are able to enter a title and are able to enter Markdown content for the page.
