@@ -1,5 +1,4 @@
-![jurrasic copy](https://user-images.githubusercontent.com/105305546/213839513-4211e3ab-55f1-4522-a4fa-0c6d72f5003c.png)
-
+![jurrasic copy](https://user-images.githubusercontent.com/105305546/213839706-b7f3f10b-da26-44c9-a91c-a734e61c925e.png)
 
 # Wiki
 Project 1 for Harvard's CS50w Web Programming with Python and JavaScript.
@@ -32,6 +31,6 @@ This site contains:
 
 5. __Random__ __Page__: Clicking `Random` in the sidebar takes user to a random encyclopedia entry via the imported `random` function.
 
-![bathroom](https://user-images.githubusercontent.com/105305546/213838721-38e0f7f5-13bb-43e4-9ad2-ecafc20ac281.gif)
+   ![bathroom](https://user-images.githubusercontent.com/105305546/213838721-38e0f7f5-13bb-43e4-9ad2-ecafc20ac281.gif)
 
 
