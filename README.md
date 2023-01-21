@@ -1,3 +1,4 @@
+Inline-style:
 ![jurrasic](https://user-images.githubusercontent.com/105305546/213838579-ddf46eca-0e03-4c62-91eb-c603344e5191.png)
 
 # Wiki
